@@ -1,25 +1,25 @@
+$(document).ready(function(){
+
 // Have the first and last li's set to a variable
 var $first = $('li:first', 'ul'),
       $last = $('li:last', 'ul');
 
-    //       var time = 5000;
-    // var tid = setTimeout(timer, time);
-    // function timer() {
-    //     var $next,
-    //     $selected = $(".selected");
-    //     // get the selected item
-    //     // If next li is empty , get the first
-    //     $next = $selected.next('li').length ? $selected.next('li') : $first;
-    //     $selected.removeClass("selected").fadeOut('fast');
-    //     $next.addClass('selected').fadeIn('fast');
-    //     tid = setTimeout(timer, time); // repeat myself
-    // }
-    // function abortTimer() { // to be called when you want to stop the timer
-    //     clearTimeout(tid);
-    // }
-
-
-
+          var time = 5000;
+    var tid = setTimeout(timer, time);
+    function timer() {
+        var $next,
+        $selected = $(".selected");
+        // get the selected item
+        // If next li is empty , get the first
+        $next = $selected.next('li.slide').length ? $selected.next('li.slide') : $first;
+        $selected.removeClass("selected").fadeOut('slow');
+        $next.addClass('selected').fadeIn('slow');
+        tid = setTimeout(timer, time); // repeat myself
+    }
+    function abortTimer() { // to be called when you want to stop the timer
+        clearTimeout(tid);
+    }
+//manual scroll through images
       $("#next").click(function () {
     var $next,
         $selected = $(".selected");
@@ -39,3 +39,4 @@ var $first = $('li:first', 'ul'),
       $selected.removeClass("selected").fadeOut('slow');
       $prev.addClass('selected').fadeIn('slow');
     });
+});

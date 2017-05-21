@@ -2,49 +2,62 @@
     .tabs li {
         display: block;
     }
+    }
+
+  @font-face {
+    font-family: Aleo-Bold;
+    src: url(aleoFonts/Aleo-Bold.otf);
 }
+  @font-face {
+    font-family: Aleo-Light;
+    src: url(aleoFonts/Aleo-Light.otf);
+  }
+  @font-face {
+    font-family: Aleo-Regular;
+    src: url(aleoFonts/Aleo-Regular.otf);
+  }
 
 .container{
-    width: 700px;
+    width: 65%;
     margin: 0 auto;
 }
 
+  h2 {
+    font-family: Aleo-Bold;
+  }
 .tabs{
     margin: 0px;
     padding: 0px;
     list-style: none;
-    background:#2c3e50;
-    border-bottom: 5px #e67e22 solid;
+    background:#232C33;
+    border-bottom: 5px #CA021C solid;
 }
-
 .tabs li{
     display: inline-block;
     margin:0;
     padding: 10px 20px 5px 20px;
     cursor: pointer;
-
-    font-size:1.2em;
+    font-family: Aleo-Regular;
+    font-size:1.0em;
     line-height:2em;
     color:#FFF;
 }
-
 .tabs li:hover {
-    background:#d35400;
+    background:#800001;
     }
-
 .tabs li.current{
-    background: #e67e22;
+    background: #CA021C;
     color: #FFF;
 }
-
 .tab-content{
     display: none;
-    background: #ededed;
+    background: #DADFF7;
     padding: 15px;
-
+    font-family: Aleo-Light;
+    font-size:1.0em;
     line-height:1.4;
-}
 
+}
 .tab-content.current{
     display: inherit;
 }
@@ -67,7 +80,7 @@
 #prev, #next {
     bottom:0;
     display:block;
-    width:120px;
+    width:100px;
     background-color:#00ABFF;
     padding:5px;
     border:none;
